@@ -1,0 +1,31 @@
+  # Lista de super mercado
+arti = ("arroz"," leche"," tuna"," cerial"," jugo")
+print (arti)
+
+suplits = [arti[0], arti [1], arti[2], arti [3], arti  [4] ]
+
+opc = 0
+
+while opc == 0:
+    print("MENU PRINCIPAL")
+    print("1. Agregar articulo")
+    print("2. Eliminar articulo")
+    print("3. Ver lista")
+    print("4. Salir")
+    opc = input("Introduzca una opcion: ")
+
+    if opc == 1:
+        # AGREGAR ELEMENTO
+        print("arti")
+    elif opc == 2:
+         # ELIMINAR ELEMENTOS
+         print ("SI")
+         print ("NO")
+      elif opc == 3
+        # VER LISTA
+
+    elif opc == 4:
+    print ("SI")
+    print ("NO")
+        break
+    

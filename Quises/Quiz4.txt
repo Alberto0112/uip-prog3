@@ -1,0 +1,36 @@
+class perro:
+
+	puntos_vida=5
+	puntos_alegria=5
+	flag = 0
+
+	def caminar(self):
+		self.puntos_vida-=2
+		self.puntos_alegria+=1
+
+	def correr(self):
+		self.puntos_vida-=4
+		self.puntos_alegria+=3
+
+	def dormir(self):
+		self.puntos_vida+=1
+		self.puntos_alegria-=3
+
+	def jugar(self):
+		self.puntos_vida-=3
+		self.puntos_alegria+=4
+
+	def comer(self):
+		self.puntos_vida+=5
+		self.puntos_alegria+=1
+
+	def viver_o_muere(self):
+		if self.puntos_vida > 0 :
+			if self.flag == 0 :
+				print ("Vive")
+			else:
+				print("Tamagochi")
+		else :
+
+			print ("Muere")
+			self.flag=1
