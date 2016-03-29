@@ -1,0 +1,33 @@
+
+import sqlite3
+
+datab = sqlite3.connect("datos.db")
+
+cons = datab.cursor()
+print("La base de datos se abrio correctamente")
+
+
+cons.execute(''' CREATE TABLE Datos
+    (Carrera      text  NOT NULL,
+    Nombre        text  NOT NULL,
+    Apellido      text  NOT NULL,
+    Edad          INT   NOT NULL) ''')
+
+print("Tabla creada con exito..........")
+
+#insertando datos a la tabla..............................................
+cons.execute("INSERT INTO Datos (Carrera,Nombre, Apellido, Edad) VALUES (1,'Cristel', 'Jaramillp', 34, ´Ingenieria en sistemas´)")
+cons.execute("INSERT INTO Datos (Carrera. Nombre, Apellido, Edad) VALUES (2, 'José', 'Batista', 26, ´Ingenieria naval´ )")
+cons.execute("INSERT INTO Datos (Carrera, Nombre, Apellido, Edad) VALUES (3, 'Juana', 'guardiola', 18, contabilidad´)")
+#................................................................................
+datab.commit()
+print("datos guardados")
+
+
+cons.execute("SELECT ID, Nombre, Apellido, Edad from Datos")
+for i in cons:
+    print("Carrera:" + str(i[0]) + "  Nombre:" + str(i[1]) + "  Apellido: " + str(i[2]) + "  Edad:" + str(i[3]))
+
+print("impresion completada")
+
+cons.close()
